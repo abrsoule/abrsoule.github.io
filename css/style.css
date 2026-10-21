@@ -103,18 +103,53 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ---------- Page header ---------- */
+/* Banner image behind the title.
+   To change the photo for EVERY page: replace images/banner.jpg.
+   To give ONE page its own photo: in that page's <header>, add
+   style="--banner: url('images/other-photo.jpg')"                    */
 .page-header {
+  --banner: url("../images/banner.jpg");
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 64px 16px 36px;
+  min-height: 420px;
+  padding: 80px 16px;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-image: var(--banner);
+  background-size: cover;
+  background-position: center;     /* try "center top" or "center 30%" to reframe */
 }
-.page-header h1 { font-size: 2.6rem; margin: 0 0 .4rem; }
+/* Dark overlay so white text stays readable on any photo */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);  /* raise to 0.5 for a busier photo */
+}
+.page-header > * { position: relative; }
+.page-header h1 {
+  font-size: 3rem;
+  margin: 0 0 .5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
 .page-header .subtitle {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.25rem;
-  color: var(--muted);
+  font-size: 1.3rem;
   margin: 0 auto;
   max-width: 700px;
+  text-shadow: 0 1px 6px rgba(0,0,0,.6);
+}
+/* Shorter banner on inner pages and on phones */
+.page-header.short { min-height: 260px; }
+@media (max-width: 600px) {
+  .page-header { min-height: 280px; }
+  .page-header.short { min-height: 180px; }
+  .page-header h1 { font-size: 2.1rem; }
 }
 
 /* ---------- Main content ---------- */
