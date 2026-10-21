@@ -18,12 +18,10 @@ const SITE = {
   // Footer icons — delete any line you don't want, fill in your links
   // icon classes come from Font Awesome / Academicons
   socials: [
-    ["Email",          "fa-solid fa-envelope",   "mailto:you@umich.edu"],
-    ["Google Scholar", "ai ai-google-scholar",   "https://scholar.google.com/citations?user=YOUR_ID"],
-    ["ORCID",          "ai ai-orcid",            "https://orcid.org/0000-0000-0000-0000"],
+    ["Email",          "fa-solid fa-envelope",   "mailto:abrsoule@gmail.com"],
+    ["Google Scholar", "ai ai-google-scholar",   "https://scholar.google.com/citations?user=RwPZ510AAAAJ"],
+    ["ORCID",          "ai ai-orcid",            "https://orcid.org/0000-0001-9164-7317"],
     ["CV",             "ai ai-cv",               "files/CV.pdf"],
-    ["GitHub",         "fa-brands fa-github",    "https://github.com/YOUR_USERNAME"],
-    ["Bluesky",        "fa-brands fa-bluesky",   "https://bsky.app/profile/YOUR_HANDLE"],
   ],
 };
 
