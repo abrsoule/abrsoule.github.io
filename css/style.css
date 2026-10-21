@@ -108,7 +108,7 @@ img { max-width: 100%; height: auto; }
    To give ONE page its own photo: in that page's <header>, add
    style="--banner: url('images/other-photo.jpg')"                    */
 .page-header {
-  --banner: url("../images/IMG_3211.jpg");
+  --banner: url("../images/IMG_3211.jpeg");
   position: relative;
   display: flex;
   flex-direction: column;
